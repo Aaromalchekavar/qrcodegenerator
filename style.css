@@ -1,0 +1,40 @@
+* {
+    text-align: center;
+}
+
+body {
+    background: url('./G3V412A.png');
+}
+
+h1 {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.container {
+    background: white;
+    width: 500px;
+    margin: auto;
+    height: 650px;
+    border-radius: 30px;
+    opacity: 0.9;
+}
+
+#input,
+#button {
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+    width: 400px;
+    height: 30px;
+}
+
+@media screen and (max-width:375px) {
+    .container {
+        width: 365px;
+    }
+    #input,
+    #button {
+        width: 300px;
+    }
+}

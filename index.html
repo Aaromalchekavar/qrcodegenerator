@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR GENERATOR</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Type in your Data or Link</h1>
+        <input type="text" id="input">
+        <button id="button" onclick="generate()">Generate</button>
+        <img id="qrcode" src="./spidey.png" style="width :300px" alt="QR Code Will be generated Here">
+    </div>
+</body>
+<script>
+    let data = document.getElementById("input").value
+    qrcode = document.getElementById("qrcode")
+
+    function generate() {
+        let url = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${data}`
+        qrcode.src = url
+    }
+</script>
+
+</html>
